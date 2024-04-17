@@ -6,15 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
         { nom: "SANTOS", prenom: "Daniela", age: 26, nationalite: "Brésilienne", experience: "7 ans", competence: "Pianiste", prix: "64 XOF", photo: "person2.jpg" },
         { nom: "UZAMAKI", prenom: "Sakura", age: 23, nationalite: "Japonaise", experience: "2 ans", competence: "Danseuse ", prix: "40 XOF", photo: "person2.jpg" },
        
-       
-        // Ajoutez d'autres personnes ici
     ];
 
     const tableBody = document.querySelector("#personnes tbody");
     const modal = document.getElementById("details-modal");
     const closeBtn = document.querySelector(".close");
 
-    // Créer les lignes de la table pour chaque personne
+    
     personnes.forEach(personne => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
@@ -27,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         tableBody.appendChild(tr);
     });
 
-    // Gérer l'événement du bouton "Détails"
+
     tableBody.addEventListener("click", function(event) {
         if (event.target.classList.contains("details-btn")) {
             const tr = event.target.closest("tr");
