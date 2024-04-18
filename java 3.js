@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Empêcher l'envoi du formulaire par défaut
 
-        // Récupérer les valeurs des champs
+        
         const nom = document.getElementById("nom").value;
         const prenom = document.getElementById("prenom").value;
         const password = document.getElementById("password").value;
         const passwordConfirm = document.getElementById("password-confirm").value;
         const rememberPassword = document.getElementById("remember-password").checked;
 
-        // Validation basique du formulaire (vérification de la correspondance des mots de passe)
+       
         if (password !== passwordConfirm) {
             alert("Les mots de passe ne correspondent pas.");
             return; // Arrêter l'exécution de la fonction si les mots de passe ne correspondent pas
