@@ -19,6 +19,5 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Mot de passe :", password);
         console.log("Se souvenir du mot de passe :", rememberPassword);
 
-        // Vous pouvez ajouter ici le code pour envoyer les données à votre serveur ou faire d'autres traitements
     });
 });
