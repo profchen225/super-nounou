@@ -1,24 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("signup-form");
-    const rememberCheckbox = document.getElementById("remember");
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
+    const parentsBtn = document.getElementById("parents-btn");
+    const nounousBtn = document.getElementById("nounous-btn");
 
-        const nom = form.nom.value;
-        const prenom = form.prenom.value;
-        const email = form.email.value;
-        const telephone = form.telephone.value;
-        const password = form.password.value;
-        const rememberPassword = rememberCheckbox.checked;
+    
+    parentsBtn.addEventListener("click", function() {
+        window.location.href = "parentins.html";
+    });
 
-        console.log("Nom :", nom);
-        console.log("Prénom :", prenom);
-        console.log("Email :", email);
-        console.log("Numéro de téléphone :", telephone);
-        console.log("Mot de passe :", password);
-        console.log("Se souvenir du mot de passe :", rememberPassword);
-
-        // Vous pouvez ajouter ici le code pour envoyer les données à votre serveur ou faire d'autres traitements
+    nounousBtn.addEventListener("click", function() {
+        window.location.href = "nounouins.html";
     });
 });

@@ -1,27 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("inscription-form");
+    const form = document.getElementById("connexion-form");
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Empêcher l'envoi du formulaire par défaut
+        event.preventDefault(); 
 
-        // Récupérer les valeurs des champs
+       
         const nom = document.getElementById("nom").value;
         const prenom = document.getElementById("prenom").value;
         const password = document.getElementById("password").value;
         const passwordConfirm = document.getElementById("password-confirm").value;
-        const rememberPassword = document.getElementById("remember-password").checked;
-
-        // Validation basique du formulaire (vérification de la correspondance des mots de passe)
         if (password !== passwordConfirm) {
             alert("Les mots de passe ne correspondent pas.");
-            return; // Arrêter l'exécution de la fonction si les mots de passe ne correspondent pas
+            return;
         }
 
-        // Afficher les valeurs soumises
-        alert(`Inscription réussie :
-Nom : ${nom}
-Prénom : ${prenom}
-Mot de passe : ${password}
-Se souvenir du mot de passe : ${rememberPassword ? "Oui" : "Non"}`);
+        if (nom && prenom && password) {
+            window.location.href = "effectif.html"; 
+        } 
+        else {
+            alert("Veuillez remplir tous les champs.");
+        }
     });
 });

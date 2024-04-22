@@ -1,60 +1,68 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
 }
-body{
-    background-image: url(image/flou.avif);;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-     
-}
+
 .container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #ccc;
-    border: 1px solid ;
-    border-radius: 5px;
-}
-
-h2 {
+    max-width: 800px;
+    margin: 100px auto;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-label {
-    display: block;
+.role-btn {
+    padding: 20px 40px;
+    margin: 0 20px;
+    font-size: 24px;
     font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-button {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #7dd0f7;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #7dd0f7;
     color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #fa8072;
+.role-btn:hover {
+    background-color: #0056b3;
 }
 
-input[type="checkbox"] {
-    margin-right: 5px;
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    animation: backgroundAnimation 20s linear infinite;
+    background: linear-gradient(270deg, #FF512F, #DD2476, #FF512F, #DD2476);
+    background-size: 400% 400%;
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
